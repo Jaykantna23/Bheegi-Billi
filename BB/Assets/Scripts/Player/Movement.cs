@@ -4,7 +4,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     private float horizontal;
-    private float speed = 8f;
+    private float speed;
     [SerializeField]private float jumpingPower = 16f;
     private bool isFacingRight = true;
 
@@ -40,6 +40,7 @@ public class Movement : MonoBehaviour
     private void Start()
     {
         anime = GetComponent<Animator>();
+        speed = DifficultyManager.speed;
     }
 
     private void Update()
