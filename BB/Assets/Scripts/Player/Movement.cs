@@ -36,11 +36,13 @@ public class Movement : MonoBehaviour
     [SerializeField] private LayerMask wallLayer;
 
     [SerializeField]private AudioSource jump_a;
+    private SliderValue sliderValue;
 
     private void Start()
     {
         anime = GetComponent<Animator>();
-        speed = DifficultyManager.speed;
+        sliderValue = GetComponent<SliderValue>();
+        speed = sliderValue.GetSliderValue();
     }
 
     private void Update()
