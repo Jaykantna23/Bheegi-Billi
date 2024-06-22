@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SettingsController : MonoBehaviour
 {
@@ -32,5 +33,9 @@ public class SettingsController : MonoBehaviour
         MainSettings.gameObject.SetActive(true);
         AudioSettings.gameObject.SetActive(false);
         Speed.gameObject.SetActive(false);
+    }
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(1);
     }
 }
